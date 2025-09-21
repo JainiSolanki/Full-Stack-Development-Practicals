@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #3498db;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+.file-list {
+  list-style: none;
+  padding: 0;
+}
+
+.file-list li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 5px;
+  border-left: 4px solid #3498db;
+}
+
+.file-link {
+  text-decoration: none;
+  color: #2980b9;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+.file-link:hover {
+  color: #1abc9c;
+  text-decoration: underline;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.file-info {
+  display: flex;
+  gap: 20px;
+}
+
+.info-item {
+  background: #ecf0f1;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.actions {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  background: #3498db;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background: #2980b9;
+}
+
+.btn-refresh {
+  background: #1abc9c;
+}
+
+.btn-refresh:hover {
+  background: #16a085;
+}
+
+.log-content {
+  background: #2c3e50;
+  border-radius: 5px;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.log-content pre {
+  color: #ecf0f1;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+.error {
+  color: #e74c3c;
+  background: #fadbd8;
+  padding: 15px;
+  border-radius: 5px;
+  border-left: 4px solid #e74c3c;
+  margin-bottom: 20px;
+}
+
+.error-details {
+  color: #666;
+  font-size: 0.9em;
+  font-family: monospace;
+  margin-bottom: 20px;
+}
+
+.no-files {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  margin: 40px 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    margin: 10px;
+    padding: 15px;
+  }
+  
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .file-info {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .actions {
+    flex-direction: column;
+  }
+  
+  .log-content {
+    padding: 15px;
+  }
+  
+  .log-content pre {
+    font-size: 0.8em;
+  }
+}

@@ -1,0 +1,4 @@
+2025-09-21 15:30:15 [DEBUG] Starting application initialization
+2025-09-21 15:30:15 [DEBUG] Loading configuration files
+2025-09-21 15:30:16 [DEBUG] Database pool created with 10 connections
+2025-09-21 15:30:17 [DEBUG] Routes loaded successfully

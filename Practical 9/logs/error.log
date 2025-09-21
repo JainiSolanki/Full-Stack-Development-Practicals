@@ -1,0 +1,5 @@
+2025-09-21 15:30:15 [ERROR] Database connection failed
+2025-09-21 15:30:16 [ERROR] Retrying connection...
+2025-09-21 15:30:17 [INFO] Connection restored
+2025-09-21 15:45:22 [ERROR] User authentication failed for user: john@example.com
+2025-09-21 16:00:01 [WARN] High memory usage detected: 85%
