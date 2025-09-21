@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Calculator 🧮</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧮 Kids Calculator 🌟</h1>
+            <p>Let's do some fun math together!</p>
+        </header>
+
+        <form method="POST" action="/calculate" class="calculator-form">
+            <div class="input-group">
+                <label for="number1">First Number:</label>
+                <input 
+                    type="text" 
+                    id="number1" 
+                    name="number1" 
+                    placeholder="Enter your first number"
+                    class="number-input"
+                >
+            </div>
+
+            <div class="operation-group">
+                <label>What do you want to do?</label>
+                <div class="operation-buttons">
+                    <label class="operation-option">
+                        <input type="radio" name="operation" value="add">
+                        <span class="operation-btn add">➕ Add</span>
+                    </label>
+                    <label class="operation-option">
+                        <input type="radio" name="operation" value="subtract">
+                        <span class="operation-btn subtract">➖ Subtract</span>
+                    </label>
+                    <label class="operation-option">
+                        <input type="radio" name="operation" value="multiply">
+                        <span class="operation-btn multiply">✖️ Multiply</span>
+                    </label>
+                    <label class="operation-option">
+                        <input type="radio" name="operation" value="divide">
+                        <span class="operation-btn divide">➗ Divide</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="number2">Second Number:</label>
+                <input 
+                    type="text" 
+                    id="number2" 
+                    name="number2" 
+                    placeholder="Enter your second number"
+                    class="number-input"
+                >
+            </div>
+
+            <button type="submit" class="calculate-btn">
+                🚀 Calculate!
+            </button>
+        </form>
+
+        <footer>
+            <p>Keep practicing math - you're doing great! 🌈</p>
+        </footer>
+    </div>
+</body>
+</html>
