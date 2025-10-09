@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Total Income</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f0f0;
+    }
+    .result {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      width: 300px;
+      text-align: center;
+    }
+    .error {
+      color: red;
+      font-weight: bold;
+    }
+    .total {
+      font-size: 22px;
+      color: green;
+      font-weight: bold;
+    }
+    a {
+      display: block;
+      margin-top: 15px;
+      color: #007bff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="result">
+    <% if (error) { %>
+      <p class="error"><%= error %></p>
+    <% } else { %>
+      <p class="total">Your Total Income: ₹ <%= total %></p>
+    <% } %>
+    <a href="/">Go Back</a>
+  </div>
+</body>
+</html>
