@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Contact Me</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      margin: 0; font-family: Arial, sans-serif; background: #f5f7fb;
+      min-height: 100vh; display: grid; place-items: center;
+    }
+    .card {
+      width: 420px; max-width: 92vw; background: #fff; color: #222;
+      padding: 24px; border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.12);
+    }
+    h1 { margin: 0 0 12px; font-size: 22px; text-align: center; }
+    p.hint { margin: 0 0 16px; color: #555; text-align: center; }
+    form { display: grid; gap: 12px; }
+    input, textarea {
+      width: 100%; padding: 12px; font-size: 16px;
+      border: 1px solid #ccc; border-radius: 8px; background: #fafafa;
+    }
+    textarea { min-height: 120px; resize: vertical; }
+    button {
+      padding: 12px; font-size: 16px; border: none; border-radius: 8px;
+      background: #007bff; color: #fff; cursor: pointer;
+    }
+    button:hover { background: #0062cc; }
+    .msg { margin-top: 10px; padding: 10px; border-radius: 8px; font-size: 14px; }
+    .msg.error { background: #fdecea; color: #c62828; }
+    .msg.success { background: #e8f5e9; color: #1b5e20; }
+    ul { margin: 0; padding-left: 18px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Contact Me</h1>
+    <p class="hint">Send me a message and I’ll reply to your email.</p>
+
+    <% if (errors && errors.length) { %>
+      <div class="msg error">
+        <strong>Please fix the following:</strong>
+        <ul>
+          <% errors.forEach(e => { %><li><%= e %></li><% }) %>
+        </ul>
+      </div>
+    <% } %>
+
+    <% if (success) { %>
+      <div class="msg success"><%= success %></div>
+    <% } %>
+
+    <form action="/contact" method="POST" novalidate>
+      <input type="text" name="name" placeholder="Your name"
+             value="<%= formData.name %>" required />
+      <input type="email" name="email" placeholder="Your email"
+             value="<%= formData.email %>" required />
+      <textarea name="message" placeholder="Your message..." required><%= formData.message %></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
