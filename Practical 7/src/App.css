@@ -1,0 +1,101 @@
+/* Make the entire page content center */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* center vertically */
+  background: #f7f7f7;
+}
+
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -200px; /* hidden by default */
+  width: 200px;
+  height: 100%;
+  background: #7d7dff;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+}
+
+.sidebar.open {
+  left: 0; /* show when open */
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar nav a {
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.sidebar nav a:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.menu-btn,
+.close-btn {
+  background: #d9534f;
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.menu-btn {
+  margin: 20px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;     /* stack button + heading + paragraph */
+  align-items: center;        /* center horizontally */
+  text-align: center;
+  gap: 20px;                  /* space between button & text */
+}
+
+.content h1 {
+  font-size: 32px;
+  color: #222;
+  margin: 0;
+}
+
+.content p {
+  font-size: 18px;
+  color: #555;
+  margin: 0;
+}
+
+.menu-btn {
+  background: #d9534f;
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
