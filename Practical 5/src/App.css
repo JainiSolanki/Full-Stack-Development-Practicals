@@ -1,0 +1,54 @@
+.calculator {
+  width: 280px;
+  margin: 100px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.display {
+  background: #f1f1f1;
+  height: 50px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 24px;
+  color: #000;              /* 🔹 make text black */
+  text-align: center;       /* 🔹 center horizontally */
+  display: flex;            /* 🔹 use flexbox for vertical centering */
+  align-items: center;      /* 🔹 center vertically */
+  justify-content: center;  /* 🔹 center horizontally */
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  background: #3498db;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+.clear {
+  grid-column: span 4;
+  background: #e74c3c;
+}
+
+.clear:hover {
+  background: #c0392b;
+}
