@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Library Portal – Login</title>
+  <style>
+    body{margin:0;font-family:Arial, sans-serif;background:#f5f7fb;min-height:100vh;display:grid;place-items:center}
+    .card{width:360px;max-width:92vw;background:#fff;color:#222;padding:24px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);text-align:center}
+    h1{margin:0 0 12px;font-size:22px}
+    input{width:100%;padding:12px;font-size:16px;border:1px solid #ccc;border-radius:8px}
+    button{margin-top:12px;width:100%;padding:12px;font-size:16px;border:none;border-radius:8px;background:#007bff;color:#fff;cursor:pointer}
+    button:hover{background:#0062cc}
+    .error{color:#c62828;margin-top:10px;font-size:14px}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Library Portal – Login</h1>
+    <form action="/login" method="POST" novalidate>
+      <input name="name" type="text" placeholder="Enter your name" value="<%= namePrefill %>" required />
+      <button type="submit">Login</button>
+      <% if (error) { %><div class="error"><%= error %></div><% } %>
+    </form>
+  </div>
+</body>
+</html>
